@@ -145,14 +145,6 @@ export default function CompatibleSetupSection() {
 
   const selectDevice = (id: string) => {
     setActiveId(id);
-    if (typeof window === "undefined") return;
-    if (window.matchMedia("(min-width: 1024px)").matches) return;
-    window.requestAnimationFrame(() => {
-      document.getElementById(`device-guide-${id}`)?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
   };
 
   return (
@@ -223,8 +215,8 @@ export default function CompatibleSetupSection() {
           </div>
         </div>
 
-        {/* Mobile: 3-up device grid, then stacked guides */}
-        <div className="mt-8 lg:hidden">
+        {/* Mobile: 3-up device grid + one guide panel (updates in place) */}
+        <div className="mt-8 lg:hidden space-y-5">
           <div className="rounded-2xl border border-zinc-200 bg-white p-3 sm:p-4">
             <p className="px-1 pb-3 text-[11px] font-bold tracking-[0.14em] uppercase" style={{ color: NAVY }}>
               Compatible Devices
@@ -260,17 +252,17 @@ export default function CompatibleSetupSection() {
             </div>
           </div>
 
-          <div className="mt-5 space-y-4">
-            {deviceSetups.map((device) => (
-              <div
-                key={device.id}
-                id={`device-guide-${device.id}`}
-                className="scroll-mt-28"
-              >
-                <GuidePanel device={device} />
-              </div>
-            ))}
-          </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={active.id}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.22 }}
+            >
+              <GuidePanel device={active} />
+            </motion.div>
+          </AnimatePresence>
         </div>
 
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3">
