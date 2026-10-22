@@ -1,16 +1,15 @@
 import React from "react";
 import Link from "next/link";
-import { Home, BookOpen, CreditCard, Store, Mail } from "lucide-react";
+import { Home, Mail } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function NotFound() {
   const links = [
     { href: "/", label: "Home", icon: Home },
-    { href: "/subscription-plans/", label: "Subscription Plans", icon: CreditCard },
-    { href: "/installation-guide/", label: "Installation Guide", icon: BookOpen },
-    { href: "/reseller-panel/", label: "Reseller Panel", icon: Store },
-    { href: "/contact/", label: "Contact Us", icon: Mail },
+    { href: "/#plans", label: "Plans", icon: Home },
+    { href: "/#installation", label: "Setup", icon: Home },
+    { href: "/#contact", label: "Contact Us", icon: Mail },
   ] as const;
 
   return (
@@ -43,7 +42,7 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href="/contact/"
+              href="/#contact"
               className="w-full sm:w-auto inline-flex h-12 items-center justify-center gap-2 rounded-[4px] border border-zinc-200 bg-white px-8 text-sm font-bold text-zinc-900 hover:bg-zinc-50 transition-all"
             >
               <Mail className="h-4 w-4" />

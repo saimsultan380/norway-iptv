@@ -7,6 +7,7 @@ export const metadata = pageMetadata({
   description:
     "Follow our IPTV Installation Guide for Firestick, Android, Smart TVs, Apple devices, Windows and Mac, with clear steps and setup assistance.",
   path: "/installation-guide/",
+  index: false,
 });
 
 export default function InstallationGuide() {

@@ -4,14 +4,7 @@ import { canonicalUrl } from "@/lib/site";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = [
-    "/",
-    "/subscription-plans/",
-    "/installation-guide/",
-    "/reseller-panel/",
-    "/blog/",
-    "/contact/",
-  ] as const;
+  const routes = ["/"] as const;
 
   return routes.map((path, index) => ({
     url: canonicalUrl(path),

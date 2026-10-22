@@ -15,25 +15,30 @@ export default function Header() {
           
           {/* Logo (Image only) */}
           <div className="flex items-center">
-            <a href="/" className="relative block h-16 w-56 sm:h-20 sm:w-72 transition-transform hover:scale-[1.02]">
-              <Image 
-                src="/logo.PNG" 
-                alt="IPTV UK Logo" 
-                fill
-                className="object-contain object-left"
-                priority
-              />
+            <a href="/" className="flex items-center gap-2.5 sm:gap-3 transition-transform hover:scale-[1.02]">
+              <span className="relative block h-8 w-[44px] sm:h-10 sm:w-[55px] overflow-hidden rounded-[3px] shadow-sm border border-zinc-200/80">
+                <Image
+                  src="/norway-flag.svg"
+                  alt="Flag of Norway"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </span>
+              <span className="text-[15px] sm:text-[18px] font-extrabold tracking-tight" style={{ color: "#0B1E5C" }}>
+                Norway IPTV
+              </span>
             </a>
           </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-6 xl:gap-8 text-[15px] font-semibold text-zinc-700">
           <a href="/" className="hover:text-[#D72C2C] transition-colors">Home</a>
-          <a href="/installation-guide/" className="hover:text-[#D72C2C] transition-colors">Installation Guide</a>
-          <a href="/subscription-plans/" className="hover:text-[#D72C2C] transition-colors">Subscription Plans</a>
-          <a href="/reseller-panel/" className="hover:text-[#D72C2C] transition-colors">Reseller Panel</a>
-          <a href="/blog/" className="hover:text-[#D72C2C] transition-colors">Blog</a>
-          <a href="/contact/" className="hover:text-[#D72C2C] transition-colors">Contact Us</a>
+          <a href="/#plans" className="hover:text-[#D72C2C] transition-colors">Plans</a>
+          <a href="/#devices" className="hover:text-[#D72C2C] transition-colors">Devices</a>
+          <a href="/#installation" className="hover:text-[#D72C2C] transition-colors">Setup</a>
+          <a href="/#faq" className="hover:text-[#D72C2C] transition-colors">FAQ</a>
+          <a href="/#contact" className="hover:text-[#D72C2C] transition-colors">Contact Us</a>
         </nav>
 
         {/* Action Button */}
@@ -41,7 +46,7 @@ export default function Header() {
           <motion.a
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            href="/subscription-plans/"
+            href="/#plans"
             className="flex h-11 items-center justify-center rounded-[4px] bg-[#D72C2C] px-6 text-sm font-bold text-white shadow-sm hover:bg-[#b91f1f] transition-colors"
           >
             Get Started
@@ -68,14 +73,14 @@ export default function Header() {
           >
             <nav className="flex flex-col gap-4 text-base font-semibold text-zinc-700">
               <a href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Home</a>
-              <a href="/installation-guide/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Installation Guide</a>
-              <a href="/subscription-plans/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Subscription Plans</a>
-              <a href="/reseller-panel/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Reseller Panel</a>
-              <a href="/blog/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Blog</a>
-              <a href="/contact/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Contact Us</a>
+              <a href="/#plans" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Plans</a>
+              <a href="/#devices" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Devices</a>
+              <a href="/#installation" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Setup</a>
+              <a href="/#faq" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">FAQ</a>
+              <a href="/#contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Contact Us</a>
             </nav>
             <div className="pt-6 mt-4 border-t border-zinc-100/50">
-              <a href="/subscription-plans/" onClick={() => setMobileMenuOpen(false)} className="flex h-12 items-center justify-center rounded-lg bg-[#D72C2C] text-base font-bold text-white hover:bg-[#b91f1f] transition-colors">
+              <a href="/#plans" onClick={() => setMobileMenuOpen(false)} className="flex h-12 items-center justify-center rounded-lg bg-[#D72C2C] text-base font-bold text-white hover:bg-[#b91f1f] transition-colors">
                 Get Started
               </a>
             </div>

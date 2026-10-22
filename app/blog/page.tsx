@@ -7,6 +7,7 @@ export const metadata = pageMetadata({
   description:
     "Explore the latest British IPTV blogs posts, tutorials, streaming guides, and news updates.",
   path: "/blog/",
+  index: false,
 });
 
 export default function BlogPage() {

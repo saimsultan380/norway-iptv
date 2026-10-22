@@ -9,22 +9,27 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t border-zinc-100">
+    <footer id="contact" className="bg-white border-t border-zinc-100 scroll-mt-28">
       <div className="mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
           
           {/* Logo and About */}
           <div className="md:col-span-1">
-            <a href="/" className="relative block h-16 w-56 sm:h-20 sm:w-72 mb-6">
-              <Image 
-                src="/logo.PNG" 
-                alt="IPTV UK Logo" 
-                fill
-                className="object-contain object-left"
-              />
+            <a href="/" className="flex items-center gap-3 mb-6">
+              <span className="relative block h-9 w-[50px] overflow-hidden rounded-[3px] shadow-sm border border-zinc-200/80">
+                <Image
+                  src="/norway-flag.svg"
+                  alt="Flag of Norway"
+                  fill
+                  className="object-cover"
+                />
+              </span>
+              <span className="text-[18px] font-extrabold tracking-tight" style={{ color: "#0B1E5C" }}>
+                Norway IPTV
+              </span>
             </a>
             <p className="text-[#343341] text-[14px] leading-relaxed font-medium max-w-xs mb-8">
-              Premium IPTV streaming service with instant activation, buffer-free HD/4K quality, and 24/7 support on every device.
+              Norsk IPTV for Norwegian viewers. Compare IPTV Norge plans, Nordic entertainment, football, HD and 4K options, and compatible devices.
             </p>
           </div>
 
@@ -33,11 +38,11 @@ export default function Footer() {
             <h4 className="text-[16px] font-bold text-[#0B1E5C] mb-6 uppercase tracking-wider">Navigation</h4>
             <ul className="space-y-4">
               <li><a href="/" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Home</a></li>
-              <li><a href="/installation-guide/" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Installation Guide</a></li>
-              <li><a href="/subscription-plans/" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Subscription Plans</a></li>
-              <li><a href="/reseller-panel/" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Reseller Panel</a></li>
-              <li><a href="/blog/" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Blog</a></li>
-              <li><a href="/contact/" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Contact Us</a></li>
+              <li><a href="/#plans" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Plans</a></li>
+              <li><a href="/#devices" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Devices</a></li>
+              <li><a href="/#installation" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Setup</a></li>
+              <li><a href="/#faq" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">FAQ</a></li>
+              <li><a href="/#contact" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
@@ -72,10 +77,10 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-16 pt-8 border-t border-zinc-100 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-zinc-400 text-[13px] font-medium text-center sm:text-left">
-            © {currentYear} British IPTV. All rights reserved.
+            © {currentYear} Norway IPTV. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <p className="text-zinc-400 text-[13px] font-medium">Built with British IPTV Passion</p>
+            <p className="text-zinc-400 text-[13px] font-medium">Built for Norwegian viewers</p>
           </div>
         </div>
       </div>

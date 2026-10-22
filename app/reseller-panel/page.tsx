@@ -7,6 +7,7 @@ export const metadata = pageMetadata({
   description:
     "Join our IPTV Reseller UK programme and manage customers, subscriptions and credits through one panel with flexible wholesale packages and support.",
   path: "/reseller-panel/",
+  index: false,
 });
 
 export default function ResellerPanel() {

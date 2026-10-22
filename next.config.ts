@@ -32,6 +32,16 @@ const nextConfig: NextConfig = {
               destination: "https://brit-iptv.co/:path*",
               permanent: true,
             },
+            { source: "/subscription-plans", destination: "/", permanent: true },
+            { source: "/subscription-plans/", destination: "/", permanent: true },
+            { source: "/installation-guide", destination: "/", permanent: true },
+            { source: "/installation-guide/", destination: "/", permanent: true },
+            { source: "/reseller-panel", destination: "/", permanent: true },
+            { source: "/reseller-panel/", destination: "/", permanent: true },
+            { source: "/blog", destination: "/", permanent: true },
+            { source: "/blog/", destination: "/", permanent: true },
+            { source: "/contact", destination: "/", permanent: true },
+            { source: "/contact/", destination: "/", permanent: true },
           ];
         },
       }

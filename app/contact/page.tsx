@@ -7,6 +7,7 @@ export const metadata = pageMetadata({
   description:
     "Request an IPTV free trial in the UK or contact our team for subscription advice, installation help, renewals and technical support on popular devices.",
   path: "/contact/",
+  index: false,
 });
 
 export default function ContactUs() {

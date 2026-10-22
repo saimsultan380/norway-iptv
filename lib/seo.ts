@@ -12,6 +12,8 @@ type PageMetaInput = {
   description: string;
   /** Path with or without trailing slash, e.g. `/contact/` or `/` */
   path: string;
+  /** Set false to keep a route out of search results. */
+  index?: boolean;
 };
 
 /**
@@ -22,12 +24,23 @@ export function pageMetadata({
   title,
   description,
   path,
+  index = true,
 }: PageMetaInput): Metadata {
   const url = canonicalUrl(path);
 
   return {
     title,
     description,
+    robots: index
+      ? undefined
+      : {
+          index: false,
+          follow: false,
+          googleBot: {
+            index: false,
+            follow: false,
+          },
+        },
     alternates: {
       canonical: url,
     },
@@ -36,7 +49,7 @@ export function pageMetadata({
       description,
       url,
       siteName: SITE_NAME,
-      locale: "en_GB",
+      locale: "en_NO",
       type: "website",
       images: [
         {

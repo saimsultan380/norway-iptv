@@ -1,55 +1,32 @@
-import Hero from "@/components/Hero";
 import Header from "@/components/Header";
-import WhyBestSection from "@/components/WhyBestSection";
-import ReadyToExperienceSection from "@/components/ReadyToExperienceSection";
-import PricingSection from "@/components/PricingSection";
-import LiveSportsSection from "@/components/LiveSportsSection";
-import CompatibleDevicesSection from "@/components/CompatibleDevicesSection";
-import StreamingPerformanceSection from "@/components/StreamingPerformanceSection";
-import WhyTrustSection from "@/components/WhyTrustSection";
-import IptvPopularSection from "@/components/IptvPopularSection";
-import FAQSection from "@/components/FAQSection";
-import FinalCTASection from "@/components/FinalCTASection";
+import Hero from "@/components/Hero";
+import NorwayHome from "@/components/home/NorwayHome";
 import Footer from "@/components/Footer";
-import ScrollReveal from "@/components/ScrollReveal";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import JsonLd from "@/components/JsonLd";
+import { faqs } from "@/lib/homepage-content";
 
 export default function Home() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-white text-zinc-950 font-sans antialiased flex flex-col">
       <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }]} />
+      <JsonLd data={faqJsonLd} />
       <Header />
       <Hero />
-      <ScrollReveal>
-        <WhyBestSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <ReadyToExperienceSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <PricingSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <LiveSportsSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <CompatibleDevicesSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <StreamingPerformanceSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <WhyTrustSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <IptvPopularSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <FAQSection />
-      </ScrollReveal>
-      <ScrollReveal>
-        <FinalCTASection />
-      </ScrollReveal>
+      <NorwayHome />
       <Footer />
     </div>
   );

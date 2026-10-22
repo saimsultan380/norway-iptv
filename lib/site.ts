@@ -1,21 +1,22 @@
 /** Canonical site origin — always HTTPS, non-www, no trailing slash on the origin. */
 export const SITE_URL = "https://brit-iptv.co";
 export const SITE_HOST = "brit-iptv.co";
-export const SITE_NAME = "IPTV UK";
+export const SITE_NAME = "Norway IPTV";
 export const SITE_EMAIL = "support@brit-iptv.co";
 
 /** Alternate names Google may use for the SERP site name. */
 export const SITE_ALTERNATE_NAMES = [
-  "Brit IPTV",
-  "British IPTV",
-  "brit-iptv.co",
+  "Norsk IPTV",
+  "IPTV Norge",
+  "IPTV Nordic",
+  "Norwegian IPTV",
 ] as const;
 
 export const DEFAULT_TITLE =
-  "IPTV UK – Premium IPTV Subscription for Live TV & Sports";
+  "Norway IPTV: IPTV Nordic, IPTV Norge & Norsk IPTV Buy 77% Off";
 
 export const DEFAULT_DESCRIPTION =
-  "Explore a premium IPTV UK service for live TV, sports, movies and popular series. Compare flexible plans, request a 24-hour trial and get setup support.";
+  "Buy Norway IPTV. Explore norsk IPTV, IPTV Norge, Nordic channels, football, HD & 4K streaming. Compare IPTV abonnement, prices, compatible devices & players";
 
 /** Site logo in header/footer (transparent). Google schema uses white-bg version. */
 export const SITE_LOGO_PATH = "/logo-schema.png";

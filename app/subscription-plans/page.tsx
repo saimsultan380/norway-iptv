@@ -7,6 +7,7 @@ export const metadata = pageMetadata({
   description:
     "Compare IPTV Subscription UK plans for live TV, sports, movies and series. Choose your duration, check connection options and request a 24-hour trial.",
   path: "/subscription-plans/",
+  index: false,
 });
 
 export default function SubscriptionPlans() {

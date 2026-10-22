@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     url: canonicalUrl("/"),
     siteName: SITE_NAME,
-    locale: "en_GB",
+    locale: "en_NO",
     type: "website",
     images: [
       {
@@ -119,7 +119,7 @@ const jsonLd = {
         width: SITE_LOGO_WIDTH,
         height: SITE_LOGO_HEIGHT,
         caption: SITE_NAME,
-        inLanguage: "en-GB",
+        inLanguage: "en",
       },
       image: logoUrl,
     },
@@ -130,7 +130,7 @@ const jsonLd = {
       alternateName: [...SITE_ALTERNATE_NAMES],
       url: canonicalUrl("/"),
       description: DEFAULT_DESCRIPTION,
-      inLanguage: "en-GB",
+      inLanguage: "en",
       publisher: { "@id": organizationId },
     },
   ],
