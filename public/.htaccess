@@ -1,5 +1,5 @@
 # Canonical URL rules for Hostinger (Apache) static export.
-# Canonical form: https://brit-iptv.co/.../  (HTTPS, non-www, trailing slash)
+# Canonical form: https://iptv-norwegian.com/.../  (HTTPS, non-www, trailing slash)
 
 DirectoryIndex index.html
 
@@ -7,11 +7,11 @@ DirectoryIndex index.html
   RewriteEngine On
   RewriteBase /
 
-  # 1. Force HTTPS + non-WWW → https://brit-iptv.co
-  RewriteCond %{HTTP_HOST} ^(www\.)?brit-iptv\.co$ [NC]
+  # 1. Force HTTPS + non-WWW → https://iptv-norwegian.com
+  RewriteCond %{HTTP_HOST} ^(www\.)?iptv-norwegian\.com$ [NC]
   RewriteCond %{HTTPS} !=on [OR]
-  RewriteCond %{HTTP_HOST} ^www\.brit-iptv\.co$ [NC]
-  RewriteRule ^ https://brit-iptv.co%{REQUEST_URI} [L,R=301]
+  RewriteCond %{HTTP_HOST} ^www\.iptv-norwegian\.com$ [NC]
+  RewriteRule ^ https://iptv-norwegian.com%{REQUEST_URI} [L,R=301]
 
   # Retired routes stay off the index. Send visitors to the homepage.
   RewriteRule ^(subscription-plans|installation-guide|reseller-panel|blog|contact)(/.*)?$ / [L,R=301]

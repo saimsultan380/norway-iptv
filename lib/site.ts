@@ -1,8 +1,8 @@
 /** Canonical site origin — always HTTPS, non-www, no trailing slash on the origin. */
-export const SITE_URL = "https://brit-iptv.co";
-export const SITE_HOST = "brit-iptv.co";
+export const SITE_URL = "https://iptv-norwegian.com";
+export const SITE_HOST = "iptv-norwegian.com";
 export const SITE_NAME = "Norway IPTV";
-export const SITE_EMAIL = "support@brit-iptv.co";
+export const SITE_EMAIL = "support@iptv-norwegian.com";
 
 /** Alternate names Google may use for the SERP site name. */
 export const SITE_ALTERNATE_NAMES = [
@@ -10,6 +10,8 @@ export const SITE_ALTERNATE_NAMES = [
   "IPTV Norge",
   "IPTV Nordic",
   "Norwegian IPTV",
+  "Iptv-norwegian.com",
+  "iptv-norwegian.com",
 ] as const;
 
 export const DEFAULT_TITLE =

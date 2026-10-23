@@ -28,8 +28,8 @@ const nextConfig: NextConfig = {
           return [
             {
               source: "/:path*",
-              has: [{ type: "host", value: "www.brit-iptv.co" }],
-              destination: "https://brit-iptv.co/:path*",
+              has: [{ type: "host", value: "www.iptv-norwegian.com" }],
+              destination: "https://iptv-norwegian.com/:path*",
               permanent: true,
             },
             { source: "/subscription-plans", destination: "/", permanent: true },
