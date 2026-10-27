@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ApplyButtonPreview from "@/components/ApplyButtonPreview";
+
+const GA_MEASUREMENT_ID = "G-EPLCHNNZP9";
 import {
   DEFAULT_DESCRIPTION,
   DEFAULT_TITLE,
@@ -159,6 +162,19 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
+        {/* Google tag (gtag.js) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         {children}
         <WhatsAppButton />
         <ApplyButtonPreview />
