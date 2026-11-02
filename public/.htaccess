@@ -14,7 +14,7 @@ DirectoryIndex index.html
   RewriteRule ^ https://iptv-norwegian.com%{REQUEST_URI} [L,R=301]
 
   # Retired routes stay off the index. Send visitors to the homepage.
-  RewriteRule ^(subscription-plans|installation-guide|reseller-panel|blog|contact)(/.*)?$ / [L,R=301]
+  RewriteRule ^(subscription-plans|installation-guide|reseller-panel|contact)(/.*)?$ / [L,R=301]
 
   # 2. Force trailing slash (skip real files and extensioned assets)
   RewriteCond %{REQUEST_FILENAME} !-f

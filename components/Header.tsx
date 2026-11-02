@@ -37,6 +37,7 @@ export default function Header() {
           <a href="/#plans" className="hover:text-[#D72C2C] transition-colors">Plans</a>
           <a href="/#devices" className="hover:text-[#D72C2C] transition-colors">Devices</a>
           <a href="/#installation" className="hover:text-[#D72C2C] transition-colors">Setup</a>
+          <a href="/blog/" className="hover:text-[#D72C2C] transition-colors">Blog</a>
           <a href="/#faq" className="hover:text-[#D72C2C] transition-colors">FAQ</a>
           <a href="/#contact" className="hover:text-[#D72C2C] transition-colors">Contact Us</a>
         </nav>
@@ -76,6 +77,7 @@ export default function Header() {
               <a href="/#plans" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Plans</a>
               <a href="/#devices" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Devices</a>
               <a href="/#installation" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Setup</a>
+              <a href="/blog/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Blog</a>
               <a href="/#faq" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">FAQ</a>
               <a href="/#contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#D72C2C] transition-colors">Contact Us</a>
             </nav>

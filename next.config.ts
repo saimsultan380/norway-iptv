@@ -38,8 +38,6 @@ const nextConfig: NextConfig = {
             { source: "/installation-guide/", destination: "/", permanent: true },
             { source: "/reseller-panel", destination: "/", permanent: true },
             { source: "/reseller-panel/", destination: "/", permanent: true },
-            { source: "/blog", destination: "/", permanent: true },
-            { source: "/blog/", destination: "/", permanent: true },
             { source: "/contact", destination: "/", permanent: true },
             { source: "/contact/", destination: "/", permanent: true },
           ];

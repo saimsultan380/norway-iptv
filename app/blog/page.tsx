@@ -3,11 +3,11 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import BlogClient from "./BlogClient";
 
 export const metadata = pageMetadata({
-  title: "Blog – British IPTV UK Guides, News & Updates",
+  title: "IPTV Norge Blog – Guides, Reviews & Streaming Tips 2026",
   description:
-    "Explore the latest British IPTV blogs posts, tutorials, streaming guides, and news updates.",
+    "Explore the latest Norwegian IPTV guides, provider comparisons, streaming setup tutorials, and sports broadcast insights.",
   path: "/blog/",
-  index: false,
+  index: true,
 });
 
 export default function BlogPage() {

@@ -41,6 +41,7 @@ export default function Footer() {
               <li><a href="/#plans" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Plans</a></li>
               <li><a href="/#devices" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Devices</a></li>
               <li><a href="/#installation" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Setup</a></li>
+              <li><a href="/blog/" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Blog</a></li>
               <li><a href="/#faq" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">FAQ</a></li>
               <li><a href="/#contact" className="text-[#343341] hover:text-[#D72C2C] text-[14px] font-semibold transition-colors">Contact Us</a></li>
             </ul>
