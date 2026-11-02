@@ -74,7 +74,6 @@ export default function BlogClient() {
               className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-white px-3.5 py-1.5 text-xs font-bold shadow-sm mb-5"
               style={{ color: NAVY }}
             >
-              <Sparkles className="h-3.5 w-3.5 text-[#D72C2C]" />
               <span>Norway IPTV Insights & Guides</span>
             </motion.div>
 
@@ -126,14 +125,6 @@ export default function BlogClient() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 transition-opacity group-hover:opacity-40" />
-
-                    {/* Category Tag */}
-                    <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-extrabold shadow-sm backdrop-blur-sm" style={{ color: NAVY }}>
-                        <Tv className="h-3 w-3 text-[#D72C2C]" />
-                        {post.category}
-                      </span>
-                    </div>
                   </a>
 
                   {/* Card Body */}

@@ -5,7 +5,6 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {
-  Sparkles,
   Calendar,
   Clock,
   ArrowRight,
@@ -183,10 +182,7 @@ export default function ChromecastIptvClient() {
 
           {/* Header Section */}
           <header className="mb-10 sm:mb-12">
-            <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200/90 bg-white px-3.5 py-1.5 text-xs font-bold shadow-sm mb-5" style={{ color: NAVY }}>
-              <Sparkles className="h-3.5 w-3.5 text-[#D72C2C]" />
-              <span>Chromecast IPTV Guide • 2026 Edition</span>
-            </div>
+
 
             <h1
               className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.2] mb-6"
