@@ -115,16 +115,15 @@ export default function BlogClient() {
                   {/* Card Image */}
                   <a
                     href={post.slug}
-                    className="relative block aspect-[16/9] w-full overflow-hidden bg-zinc-100"
+                    className="relative block aspect-[16/9] w-full overflow-hidden bg-white"
                   >
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 transition-opacity group-hover:opacity-40" />
                   </a>
 
                   {/* Card Body */}

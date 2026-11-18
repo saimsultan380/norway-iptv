@@ -215,14 +215,14 @@ export default function NorskIptvClient() {
           </section>
 
           {/* Single Featured Image inside blog post */}
-          <figure className="relative my-10 overflow-hidden rounded-2xl border border-zinc-200/80 bg-zinc-100 shadow-md">
+          <figure className="relative my-10 overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-md">
             <div className="relative aspect-[16/9] w-full">
               <Image
                 src="/norsk-iptv-guide.jpg"
                 alt="Norsk IPTV streaming on smart TV with Norwegian television guide, sports, and Nordic entertainment"
                 fill
                 priority
-                className="object-cover"
+                className="object-contain object-center"
                 sizes="(max-width: 896px) 100vw, 896px"
               />
             </div>

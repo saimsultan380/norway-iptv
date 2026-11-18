@@ -185,14 +185,14 @@ export default function BlogPostClient() {
           </section>
 
           {/* Single Featured Image inside blog post */}
-          <figure className="relative my-10 overflow-hidden rounded-2xl border border-zinc-200/80 bg-zinc-100 shadow-md">
+          <figure className="relative my-10 overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-md">
             <div className="relative aspect-[16/9] w-full">
               <Image
                 src="/best-iptv-providers-norway.jpg"
                 alt="Nordic IPTV streaming on smart TV with Norwegian channels, live sports, and entertainment"
                 fill
                 priority
-                className="object-cover"
+                className="object-contain object-center"
                 sizes="(max-width: 896px) 100vw, 896px"
               />
             </div>
